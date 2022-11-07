@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8. 반복문 for</title>
+</head>
+<body>
+  
+</body>
+<script>
+  for(var i = 1; i <= 10; i++) {
+    console.log(i + '번째 반복입니다.');
+  }
+
+  console.warn('i의 현재 값은? ' + i);
+  
+  // for(초기값 선언(초기값), 언제까지 반복시킬 것인지 조건(조건값), 초기값을 얼마나 변경시킬 것인지(증감값))
+
+  for( var i = 1; i <=10; i++ ) {
+    console.log(i + '번째 반복중입니다.');
+    if(i == 5) {
+      console.warn('조건에 도달했으므로 반복문을 끝냅니다.')
+      break;
+    }
+  }
+</script>
+</html>
