@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>17.객체 기본 응용</title>
+</head>
+<body>
+  
+</body>
+<script>
+  var fruit = {};
+  // 빈 객체 선언
+
+  fruit.name = '망고';
+  fruit.price = '2500';
+  fruit.from = '제주도';
+
+  console.log(fruit);
+
+  fruit.price = 2500;
+
+  // delete(객체명.속석명(키값));
+  // 키값을 사용하여 객체 안에 있는 값을 지워줄 수 있습니다.
+
+  delete(fruit.from);
+  console.log(fruit);
+
+  // 객체배열 = 배열안에 객체가 들어있는 상태
+  
+  var students = [];
+
+  var student1 = {
+    name : '철수',
+    eng : 70,
+    math : 85,
+    kor : 70 
+  }
+  // 철수라는 한 사람의 객체
+
+  var student2 = {
+    name : '민수',
+    eng : 85,
+    math : 68,
+    kor : 77 
+  }
+
+  var student3 = {
+    name : '영희',
+    eng : 95,
+    math : 61,
+    kor : 88 
+  }
+
+  var student4 = {
+    name : '의중',
+    eng : 67,
+    math : 86,
+    kor : 73 
+  }
+
+  var student5 = {
+    name : '희민',
+    eng : 90,
+    math : 93,
+    kor : 81 
+  }
+
+  students.push(student1);
+  students.push(student2);
+  students.push(student3);
+  students.push(student4);
+  students.push(student5);
+  
+  console.warn(students);
+
+  for(var i = 0; i < students.length; i++) {
+    console.log('안녕하세요 제 이름은 ' + students[i].name + '입니다.')
+  }
+
+  for( index in students ) {
+    for( item in students[index]) {
+      console.log(students[index][item]);
+    }
+  }
+  // for in을 사용해서 배열과 객체를 반복시킬 수 있다.
+</script>
+</html>
