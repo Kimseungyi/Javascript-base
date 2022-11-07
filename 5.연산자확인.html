@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5. 연산자확인</title>
+</head>
+<body>
+  
+</body>
+<script>
+  var a = 10;
+  var b = 5;
+  var c =3;
+  var d = "10";
+  //d는 문자
+
+  console.log(a+b);
+  // 15
+  console.log(a-b);
+  // 5
+  console.log(a/b);
+  // 2
+  console.log(a*b);
+  // 50
+  console.log(a%b);
+  // 1
+
+  //++ -> 1을 더해라
+  //-- -> 1을 빼라
+
+  console.log(a++);
+  //10이었던 a가 출력된 다음 ++ 를 통해서 1만큼 더해진거에요
+  // 자바스크립트는 위에서 아래로 읽어 들이면서 하나의 줄안에서는 왼쪽부터 오른쪽으로 읽어들여요
+  
+  console.log(a);
+  // 11
+
+  console.log(++a);
+  // 12
+
+  console.log(a--);
+  console.log(a);
+  console.log(--a);
+
+  // 비교연산자
+  // 두 값을 비교를 해주는 연산자
+  // 같은 것을 비교를 한다고 예시를 들 때
+  // 10 = 10 --> true 참
+  // 10 = 5 --> false 거짓
+
+  // ==, ===
+
+  console.log(a == 10);
+  //true 참
+  console.log(a == 3);
+  //false 거짓
+
+  // 변수 자료형 ===, 왼쪽과 오른쪽의 값과, 자료형까지 같아야 true
+
+  console.log(a == d);
+  // 숫자 10이 문자 10이랑 같나요?
+  // == 자료형까지 비교하지 않고, 값만 비교하기 때문에 true
+  //true
+  console.log(a === d);
+  // 숫자 10과 문자 10
+  // 값은 같지만, 자료형이 다르기 때문에 false
+  // false
+  console.log(d === '10');
+  //true
+  // 문자 10과 문자 10
+  // 값도 자료형도 모두 일치하므로 === 에서도 true
+
+  // !=, !==
+  // 자바스크립트에서 true와 false가 나오는 경우 앞에 !를 붙였을 때
+  // true --> false
+  // false --> true
+  // !는 앞에 붙여주면 반대의 의미를 가지게 된다.
+
+  console.warn(a != 10);
+  // a와 10은 같지만, !때문에 결과는 false
+  console.warn(a != '10');
+  // a와 10은 같지만, !때문에 결과는 false
+  console.warn(a !== '10');
+  // != -> == 의 반대의 의미
+  // !== -> ===의 반대의 의미
+  // !== 또한 값과 자료형이 같으면 false
+  // 값과 자료형이 다르면 true
+  // 숫자 10과 문자 10이 다르기 때문에 결과값이 true
+
+  // 크기비교연산자
+  // <, >, <=, >=
+  // < 왼족이 오른쪽보다 작다
+  // > 왼쪽이 오른쪽보다 크다
+  // <= 왼쪽이 오른쪽보다 작거나 같다
+  // >= 왼쪽이 오른쪽보다 크거나 같다
+
+  console.log(a > 5);
+  console.log(a < 5);
+  console.log(a >= 10);
+  console.log(a <= 10);
+
+  // true, false
+  // 많이 사용하는 문법 조건문에 같이 들어가기때문에
+  // 비교연산자는 정확한 이해가 필요하다.
+</script>
+</html>
