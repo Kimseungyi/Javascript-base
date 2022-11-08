@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>22. 객체 관련 키워드</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    function Person(name){
+      this.name = name;
+      this.hello = function(){
+        console.log('안녕! 난 ' + this.name + '야!');
+      }
+    }
+
+    var student = new Person('철수'); // 생성자 함수를 통해 객체를 생성할 때는 무조건 'new'를 붙여줘야함 
+
+    var student2 = {
+      name : '영희',
+      hello : function(){
+        console.log('안녕! 난 '+ this.name + '야!');
+      }
+    }
+
+    student.hello();
+    student2.hello();
+
+    // instanceof 키워드
+    // 해당 객체가 어느 함수를 통해 생성됐는지 확인이 가능함
+
+    console.log(student instanceof Person); //true
+    console.log(student2 instanceof Person); //false
+
+    var student3 = Person('승이'); // 'new' 를 선언해주지 않았기 때문에 에러가 남.
+
+</script>
+</html>
