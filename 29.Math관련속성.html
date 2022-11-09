@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>29. Math 관련 속성</title>
+</head>
+<body>
+  
+</body>
+<script>
+  var a = 0.1;
+  var b = 0.2;
+
+  console.log(a+b) //0.3000000000004
+  console.log((a*10 + b*10)/10); // 0.3
+
+  // 0.1 0.2 --> 2진법을 사용하여 계산하므로 특정 소수들은 정확하게 계산이 X
+
+  console.log(Math);
+
+  //절대값
+  // Math.abs(변수명);
+
+  var num = 123;
+  var num2 = -123;
+  
+  console.log(Math.abs(num2));
+
+  // 난수 생성(랜덤)
+  // Math.random();
+
+  console.log(Math.random());
+  // 0부터 1까지의 랜덤값 --> 0과 1사이의 소수 또한 포함을 함 
+
+  console.log(Math.random()*1000);
+  // 0부터 1000까지의 난수를 생성
+  // 정수로 바꾸기 위해선 반올림, 내림, 올림 추가 작업 필요
+
+  //내림
+  // Math.floor(변수명)
+  console.log(Math.floor(5.8)); // 5
+
+  //올림
+  // Math.ceil(변수명)
+  console.log(Math.ceil(5.1)); // 6
+
+  //반올림
+  //Math.round(변수명)
+  console.log(Math.round(5.6))// 6
+  console.log(Math.round(5.1))// 5
+
+  // 내림, 올림, 반올림 모두 기본적으로 소수 0의자리에서 진행
+  
+  console.log(Math.round((3.141592*100))/100); // 3.14 소수점 자리를 변경하는 방법
+
+  console.log(Math.floor(Math.random()*1000)); // 0부터 999까지의 정수값 
+
+  console.log(Math.floor(Math.random()*5)); // 0부터 4까지의 정수값
+  // 0~5 = 0이상 5미만 
+  // 랜덤값에 곱셈을 통해서 최대값을 조정, 덧셈을 통해서 최소값을 정해줄 수 있다.
+  
+  console.log(Math.pow(2,4));
+  // 2의 4승 = 16
+
+  console.log(Math.sqrt(9));
+  // 9의 제곱근 = 3
+
+</script>
+</html>
