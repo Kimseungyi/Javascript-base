@@ -68,5 +68,34 @@
 
   console.log(s10.getExplane());
 
+  function Iphone(n, p, mb, v){
+    this.p = Product;
+    this.p(n,p,mb);
+
+    let version = v;
+
+    this.getVersion = function(){
+      return version;
+    }
+
+    this.setVersion = function(v){
+      version = v;
+    }
+  }
+
+  Iphone.prototype = Product.prototype;
+
+  var iphone = new Iphone('아이폰13', '120만원', 'apple', '프로');
+
+  console.log(`아이폰의 이름은? ${iphone.getName()}`);
+
+  console.log(iphone.getExplane());
+
+  console.log('Iphone을 통해서 생성됐나요?' + (iphone instanceof Iphone));
+  console.log('Product를 통해 생성됐나요?' + (iphone instanceof Product));
+
+  
+
+
 </script>
 </html>
